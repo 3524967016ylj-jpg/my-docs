@@ -13,13 +13,19 @@
 
 我使用自己的 GitHub 账号创建了公开仓库 `my-docs`，以 `main` 为源码分支。仓库地址见上方链接。
 
-<!-- 待补本人仓库首页截图：images/01-repository.png，须显示所有者、仓库名和 Public。 -->
+截图显示仓库所有者、`my-docs` 名称、`Public` 标识及项目文件。
+
+![个人公开仓库首页](images/01-repository.png)
 
 ### 2.2 项目结构与配置
 
 `docs/` 保存四个 Markdown 页面；`mkdocs.yml` 的 `nav` 将它们加入导航，`site_url` 指向项目站点。`site/` 是构建生成的目录，已写入 `.gitignore`，不提交到源码分支。
 
-<!-- 待补项目目录与 mkdocs.yml 实际截图：images/02-structure-config.png。 -->
+项目目录截图显示工作流、四个文档页面及报告目录；配置截图显示网站地址、Material 主题和四页导航。
+
+![项目目录结构](images/02-project-structure.png)
+
+![MkDocs 网站配置](images/02-mkdocs-config.png)
 
 ### 2.3 本地构建与预览
 
@@ -33,21 +39,21 @@
 
 ### 2.4 Pages 发布来源
 
-本项目使用 GitHub Actions 上传和部署 `site/` 构建产物。首次部署运行记录显示部署成功；Pages 设置页的来源截图仍需补充。
+本项目使用 GitHub Actions 上传和部署 `site/` 构建产物。Pages 设置页的“来源”为 GitHub Actions，并显示公开站点地址。
 
-<!-- 待补 Settings → Pages 中 Source 为 GitHub Actions 的实际截图：images/05-pages-source.png。 -->
+![Pages 发布来源设置](images/05-pages-settings.png)
 
 ### 2.5 首次自动部署
 
 提交 [`963683e`](https://github.com/3524967016ylj-jpg/my-docs/commit/963683e) 推送到 `main` 后，首次[工作流运行](https://github.com/3524967016ylj-jpg/my-docs/actions/runs/43844727234)显示 `build` 和 `deploy` 均成功，并给出网站地址。运行中有 Node.js 20 与运行器迁移提示，未阻止此次部署。
 
-<!-- 待补同时显示 build、deploy 成功的实际截图：images/06-first-action.png。 -->
+![首次 Actions 构建与部署成功](images/06-actions-first-deploy.png)
 
 ### 2.6 公开网站与四页导航
 
-站点地址为 [https://3524967016ylj-jpg.github.io/my-docs/](https://3524967016ylj-jpg.github.io/my-docs/)。第二次部署后，我检查了首页、关于、使用指南和 API 参考四个地址，均正常返回；首页 HTML 已包含新增的“自动部署验证”文字。公开网站的地址栏截图仍待补充。
+站点地址为 [https://3524967016ylj-jpg.github.io/my-docs/](https://3524967016ylj-jpg.github.io/my-docs/)。截图保留了公开网站地址栏和四页导航。第二次部署后，我检查了首页、关于、使用指南和 API 参考四个地址，均正常返回；首页 HTML 已包含新增的“自动部署验证”文字。
 
-<!-- 待补公开网站实际截图，保留地址栏：images/07-public-site.png。 -->
+![首次公开网站效果及地址](images/07-public-website.png)
 
 ### 2.7 第二次推送自动更新
 
@@ -55,7 +61,11 @@
 
 - 第二次提交链接：[8ba03da](https://github.com/3524967016ylj-jpg/my-docs/commit/8ba03dacd8c3e23156de4503a2c2cfd54f1f484d)
 - 对应 Actions 运行链接：[第 2 次自动部署](https://github.com/3524967016ylj-jpg/my-docs/actions/runs/43855835222)
-- 网站出现新增文字的截图：待补
+第二次运行列表截图显示提交 `8ba03da` 对应的运行 `#2` 成功，公开网站截图显示新增验证文字。
+
+![第二次推送自动触发的成功运行](images/08-auto-update-actions.png)
+
+![公开网站显示第二次更新内容](images/09-auto-update-result.png)
 
 ## 3. 问题与解决
 
